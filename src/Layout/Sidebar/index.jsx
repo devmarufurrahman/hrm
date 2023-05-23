@@ -21,10 +21,22 @@ const Sidebar = () => {
 				onClick={({ key }) => {
 					navigate(key);
 				}}
+				defaultSelectedKeys={[window.location.pathname]}
 				items={[
 					{ label: "Dashboard", key: "/", icon: <AiOutlineHome /> },
 					{ label: "Settings", key: "/settings", icon: <AiOutlineSetting /> },
-					{ label: "HRM", key: "", icon: <FiUsers /> },
+					{
+						label: "HRM",
+						key: "",
+						icon: <FiUsers />,
+						children: [
+							{ label: "Hrm Mode Setup", key: "" },
+							{ label: "Company", key: "" },
+							{ label: "Hrm Mode Setup", key: "" },
+							{ label: "Hrm Mode Setup", key: "" },
+							{ label: "Hrm Mode Setup", key: "" },
+						],
+					},
 					{ label: "Attendants", key: "", icon: <AiOutlineSchedule /> },
 					{ label: "Application", key: "", icon: <AiOutlineAppstoreAdd /> },
 					{ label: "Transfer", key: "", icon: <BiTransfer /> },
