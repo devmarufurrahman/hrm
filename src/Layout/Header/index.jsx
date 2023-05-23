@@ -1,10 +1,10 @@
 import { HomeOutlined, LogoutOutlined } from "@ant-design/icons";
-import { Button, Space } from "antd";
+import { Button, Space, Typography } from "antd";
 
 const Header = () => {
 	return (
 		<div className="flex justify-between">
-			<h1 className="text-6xl">HRM</h1>
+			<Typography.Title>HRM</Typography.Title>
 			<Space wrap>
 				<Button icon={<HomeOutlined />}>Dashboard</Button>
 

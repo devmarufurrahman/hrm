@@ -1,9 +1,8 @@
 import { Space } from "antd";
-import "./App.css";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import PageContent from "./components/PageContent";
-import Footer from "./components/Footer";
+import Header from "./Layout/Header";
+import Sidebar from "./Layout/Sidebar";
+import PageContent from "./Layout/Content";
+import Footer from "./Layout/Footer";
 
 function App() {
 	return (
