@@ -1,10 +1,12 @@
+import { Layout } from "antd";
 import Router from "../../components/Router";
+const { Content } = Layout;
 
 const PageContent = () => {
 	return (
-		<div>
+		<Content>
 			<Router />
-		</div>
+		</Content>
 	);
 };
 
