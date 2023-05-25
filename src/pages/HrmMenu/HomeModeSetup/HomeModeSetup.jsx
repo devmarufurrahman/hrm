@@ -9,10 +9,11 @@ const HomeModeSetup = () => {
 	};
 	return (
 		<>
-			<div
+			<Space
+				align="center"
 				style={{ width: 900 }}
 				className="modeParent p-10 bg-gray-100 flex justify-center ">
-				<div className="">
+				<div>
 					<Typography.Title>HRM Mode Setup</Typography.Title>
 					<Form>
 						<Space align="start" direction="vertical">
@@ -69,7 +70,7 @@ const HomeModeSetup = () => {
 						</Space>
 					</Form>
 				</div>
-			</div>
+			</Space>
 		</>
 	);
 };

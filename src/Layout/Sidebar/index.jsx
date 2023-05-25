@@ -21,6 +21,7 @@ const Sidebar = ({ collapsed }) => {
 			<Layout>
 				<Sider trigger={null} collapsible collapsed={collapsed}>
 					<Menu
+						theme="light"
 						onClick={({ key }) => {
 							navigate(key);
 						}}

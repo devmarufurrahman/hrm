@@ -1,74 +1,62 @@
-import { Button, Form, Input, Radio, Select, Space, Typography } from "antd";
-import { useState } from "react";
+import {
+	Button,
+	Checkbox,
+	Form,
+	Input,
+	Radio,
+	Select,
+	Space,
+	Typography,
+} from "antd";
+import { BiSave } from "react-icons/bi";
+import { AiOutlineReload } from "react-icons/ai";
+import Search from "antd/es/input/Search";
 
 const Company = () => {
-	const [value, setValue] = useState(1);
-	const onChange = (e) => {
-		console.log("radio checked", e.target.value);
-		setValue(e.target.value);
-	};
+	const onSearch = (e) => {};
 	return (
 		<>
-			<div
-				style={{ width: 900 }}
-				className="modeParent p-10 bg-gray-100 flex justify-center ">
-				<div className="">
-					<Typography.Title>Company Details</Typography.Title>
-					<Form>
-						<Space align="start" direction="vertical">
-							<Form.Item label="User" name="username">
-								<Select
-									style={{ width: 300 }}
-									showSearch
-									placeholder="Select a person"
-									optionFilterProp="children"
-									filterOption={(input, option) =>
-										(option?.label ?? "")
-											.toLowerCase()
-											.includes(input.toLowerCase())
-									}
-									options={[
-										{
-											value: "jack",
-											label: "Jack",
-										},
-										{
-											value: "lucy",
-											label: "Lucy",
-										},
-										{
-											value: "tom",
-											label: "Tom",
-										},
-									]}
-								/>
+			<div style={{ width: 900 }} className="modeParent p-10 bg-gray-100 ">
+				<Space size={90} direction="vertical">
+					<div className="bg-white p-7 shadow-md rounded-lg">
+						<Typography.Title
+							level={4}
+							type="success"
+							keyboard
+							className="text-center">
+							Company Details
+						</Typography.Title>
+						<Form style={{ width: 600 }}>
+							<Form.Item label="Company Name" name="companyName">
+								<Input placeholder="Company Name" />
 							</Form.Item>
-							<Radio.Group onChange={onChange} value={value}>
-								<Space direction="vertical">
-									<Radio value={1}>Normal Mode</Radio>
-									<Radio value={2}>Compliance Mode</Radio>
-									<Radio value={3}>Third Mode</Radio>
-									<Radio value={4}>
-										More...
-										{value === 4 ? (
-											<Input
-												style={{
-													width: 100,
-													marginLeft: 10,
-												}}
-											/>
-										) : null}
-									</Radio>
-								</Space>
-							</Radio.Group>
-							<div>
-								<Button type="primary" danger>
-									Save
-								</Button>
-							</div>
+							<Form.Item label="Company Name (Bangla)" name="companyNameBangla">
+								<Input placeholder="Company Name" />
+							</Form.Item>
+							<Form.Item label="Is Active" name="isActive">
+								<Checkbox></Checkbox>
+							</Form.Item>
+						</Form>
+						<Space>
+							<Button icon={<BiSave />}>Save</Button>
+							<Button icon={<AiOutlineReload />}>Clear</Button>
 						</Space>
-					</Form>
-				</div>
+					</div>
+					<div className="bg-white p-7 shadow-md rounded-lg">
+						<Typography.Title
+							level={4}
+							type="success"
+							keyboard
+							className="text-center">
+							Company Summery
+						</Typography.Title>
+						<Search
+							placeholder="input search text"
+							onSearch={onSearch}
+							enterButton
+						/>
+					</div>
+				</Space>
 			</div>
 		</>
 	);
