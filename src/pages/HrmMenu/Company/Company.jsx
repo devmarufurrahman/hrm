@@ -1,19 +1,12 @@
-import {
-	Button,
-	Checkbox,
-	Form,
-	Input,
-	Radio,
-	Select,
-	Space,
-	Typography,
-} from "antd";
+import { Button, Checkbox, Form, Input, Space, Typography } from "antd";
 import { BiSave } from "react-icons/bi";
 import { AiOutlineReload } from "react-icons/ai";
 import Search from "antd/es/input/Search";
 
 const Company = () => {
-	const onSearch = (e) => {};
+	const onSearch = (value) => {
+		console.log(value);
+	};
 	return (
 		<>
 			<div style={{ width: 900 }} className="modeParent p-10 bg-gray-100 ">
@@ -37,11 +30,16 @@ const Company = () => {
 								<Checkbox></Checkbox>
 							</Form.Item>
 						</Form>
-						<Space>
-							<Button icon={<BiSave />}>Save</Button>
-							<Button icon={<AiOutlineReload />}>Clear</Button>
-						</Space>
+						<div className="flex justify-center items-center">
+							<Space>
+								<Button icon={<BiSave />}>Save</Button>
+								<Button icon={<AiOutlineReload />}>Clear</Button>
+							</Space>
+						</div>
 					</div>
+
+					{/* =================================================== */}
+
 					<div className="bg-white p-7 shadow-md rounded-lg">
 						<Typography.Title
 							level={4}
@@ -50,11 +48,13 @@ const Company = () => {
 							className="text-center">
 							Company Summery
 						</Typography.Title>
-						<Search
-							placeholder="input search text"
-							onSearch={onSearch}
-							enterButton
-						/>
+						<div className="flex justify-center items-center mt-7">
+							<Search
+								className="w-56 text-center "
+								placeholder="input search text"
+								onSearch={onSearch}
+							/>
+						</div>
 					</div>
 				</Space>
 			</div>
