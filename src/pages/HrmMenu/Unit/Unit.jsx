@@ -10,14 +10,9 @@ import {
 } from "antd";
 import { BiSave } from "react-icons/bi";
 import { AiOutlineReload } from "react-icons/ai";
-import Search from "antd/es/input/Search";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
 const Unit = () => {
-	const onSearch = (value) => {
-		console.log(value);
-	};
-
 	const columns = [
 		{
 			title: "Unit Name",
