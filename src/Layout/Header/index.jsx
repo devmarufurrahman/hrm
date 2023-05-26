@@ -32,7 +32,9 @@ const LayoutHeader = ({ handleCollapse, collapsed }) => {
 					/>
 					<Typography.Title>HRM</Typography.Title>
 					<Space>
-						<Button icon={<HomeOutlined />}>Dashboard</Button>
+						<Button type="primary" icon={<HomeOutlined />}>
+							Dashboard
+						</Button>
 
 						<Button type="primary" danger icon={<LogoutOutlined />}>
 							Logout
