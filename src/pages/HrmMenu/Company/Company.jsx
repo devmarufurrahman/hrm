@@ -195,8 +195,16 @@ const Company = () => {
 						</Form>
 						<div className="flex justify-center items-center">
 							<Space>
-								<Button icon={<BiSave />}>Save</Button>
-								<Button icon={<AiOutlineReload />}>Clear</Button>
+								<Button
+									style={{ backgroundColor: "#3de058" }}
+									icon={<BiSave />}>
+									Save
+								</Button>
+								<Button
+									style={{ backgroundColor: "#ed6815" }}
+									icon={<AiOutlineReload />}>
+									Clear
+								</Button>
 							</Space>
 						</div>
 					</div>

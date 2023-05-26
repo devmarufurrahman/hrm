@@ -63,9 +63,7 @@ const HomeModeSetup = () => {
 								</Space>
 							</Radio.Group>
 							<div>
-								<Button type="primary" danger>
-									Save
-								</Button>
+								<Button style={{ backgroundColor: "#3de058" }}>Save</Button>
 							</div>
 						</Space>
 					</Form>
