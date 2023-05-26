@@ -1,6 +1,6 @@
 import { Space, Table, Typography } from "antd";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import UnitDetailsTable from "./UnitDetailsTable";
+import UnitDetailsForm from "./UnitDetailsForm";
 
 const Department = () => {
 	const columns = [
@@ -206,7 +206,7 @@ const Department = () => {
 		<>
 			<div style={{ width: 1200 }} className="modeParent p-10 bg-gray-100 ">
 				<Space size={90} direction="vertical">
-					<UnitDetailsTable />
+					<UnitDetailsForm />
 
 					{/* =================================================== */}
 
