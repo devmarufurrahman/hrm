@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, Select, Space, Typography } from "antd";
+import { Button, Checkbox, Form, Input, Space, Typography } from "antd";
 import { AiOutlineReload } from "react-icons/ai";
 import { BiSave } from "react-icons/bi";
 
@@ -10,39 +10,14 @@ const index = () => {
 				type="success"
 				keyboard
 				className="text-center">
-				Unit Details
+				Department Details
 			</Typography.Title>
 			<Form style={{ width: 600 }}>
-				<Form.Item label="Company Name" name="companyName">
-					<Select
-						style={{ width: 300 }}
-						showSearch
-						placeholder="Select company"
-						optionFilterProp="children"
-						filterOption={(input, option) =>
-							(option?.label ?? "").toLowerCase().includes(input.toLowerCase())
-						}
-						options={[
-							{
-								value: "jack",
-								label: "Jack",
-							},
-							{
-								value: "lucy",
-								label: "Lucy",
-							},
-							{
-								value: "tom",
-								label: "Tom",
-							},
-						]}
-					/>
+				<Form.Item label="Department Name" name="departmentName">
+					<Input placeholder="Department Name" />
 				</Form.Item>
-				<Form.Item label="Unit Name" name="unitName">
-					<Input placeholder="Unit Name" />
-				</Form.Item>
-				<Form.Item label="Unit Name (Bangla)" name="unitNameBangla">
-					<Input placeholder="Unit Name" />
+				<Form.Item label="Department Name (Bangla)" name="departmentNameBangla">
+					<Input placeholder="Department Name" />
 				</Form.Item>
 				<Form.Item label="Is Active" name="isActive">
 					<Checkbox></Checkbox>
@@ -50,8 +25,14 @@ const index = () => {
 			</Form>
 			<div className="flex justify-center items-center">
 				<Space>
-					<Button icon={<BiSave />}>Save</Button>
-					<Button icon={<AiOutlineReload />}>Clear</Button>
+					<Button style={{ backgroundColor: "#3de058" }} icon={<BiSave />}>
+						Save
+					</Button>
+					<Button
+						style={{ backgroundColor: "#ed6815" }}
+						icon={<AiOutlineReload />}>
+						Clear
+					</Button>
 				</Space>
 			</div>
 		</div>
