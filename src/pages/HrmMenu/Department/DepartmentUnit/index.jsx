@@ -1,17 +1,11 @@
-import { Button, Checkbox, Form, Input, Space, Table, Typography } from "antd";
+import { Button, Checkbox, Form, Space, Table, Typography } from "antd";
 import { BiSave } from "react-icons/bi";
-import { AiOutlineReload } from "react-icons/ai";
-import Search from "antd/es/input/Search";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
-const Company = () => {
-	const onSearch = (value) => {
-		console.log(value);
-	};
-
+const DepartmentUnit = () => {
 	const columns = [
 		{
-			title: "Company Name",
+			title: "Unit Name",
 			dataIndex: "name",
 			filters: [
 				{
@@ -53,7 +47,7 @@ const Company = () => {
 			width: "400px",
 		},
 		{
-			title: "Company Name (Bangla)",
+			title: "Company Name ",
 			dataIndex: "name",
 			filters: [
 				{
@@ -95,10 +89,48 @@ const Company = () => {
 			width: "400px",
 		},
 		{
-			title: "Age",
-			dataIndex: "age",
-			sorter: (a, b) => a.age - b.age,
+			title: "Activity ",
+			dataIndex: "name",
+			filters: [
+				{
+					text: "Joe",
+					value: "Joe",
+				},
+				{
+					text: "Category 1",
+					value: "Category 1",
+					children: [
+						{
+							text: "Yellow",
+							value: "Yellow",
+						},
+						{
+							text: "Pink",
+							value: "Pink",
+						},
+					],
+				},
+				{
+					text: "Category 2",
+					value: "Category 2",
+					children: [
+						{
+							text: "Green",
+							value: "Green",
+						},
+						{
+							text: "Black",
+							value: "Black",
+						},
+					],
+				},
+			],
+			filterMode: "tree",
+			filterSearch: true,
+			onFilter: (value, record) => record.name.includes(value),
+			width: "400px",
 		},
+
 		{
 			title: "Address",
 			dataIndex: "address",
@@ -171,78 +203,52 @@ const Company = () => {
 		console.log("params", pagination, filters, sorter, extra);
 	};
 	return (
-		<>
-			<div style={{ width: 1200 }} className="modeParent p-10 bg-gray-100 ">
-				<Space size={90} direction="vertical">
-					<div className="bg-white p-7 shadow-md rounded-lg">
-						<Typography.Title
-							level={4}
-							type="success"
-							keyboard
-							className="text-center">
-							Company Details
-						</Typography.Title>
-						<Form style={{ width: 600 }}>
-							<Form.Item label="Company Name" name="companyName">
-								<Input placeholder="Company Name" />
-							</Form.Item>
-							<Form.Item label="Company Name (Bangla)" name="companyNameBangla">
-								<Input placeholder="Company Name" />
-							</Form.Item>
-							<Form.Item label="Is Active" name="isActive">
-								<Checkbox></Checkbox>
-							</Form.Item>
-						</Form>
-						<div className="flex justify-center items-center">
-							<Space>
-								<Button
-									style={{ backgroundColor: "#3de058" }}
-									icon={<BiSave />}>
-									Save
-								</Button>
-								<Button
-									style={{ backgroundColor: "#ed6815" }}
-									icon={<AiOutlineReload />}>
-									Clear
-								</Button>
-							</Space>
-						</div>
-					</div>
+		<div className="bg-white p-7 shadow-md rounded-lg">
+			<Typography.Title
+				level={4}
+				type="success"
+				keyboard
+				className="text-center">
+				Unit Summery
+			</Typography.Title>
 
-					{/* =================================================== */}
-
-					<div className="bg-white p-7 shadow-md rounded-lg">
-						<Typography.Title
-							level={4}
-							type="success"
-							keyboard
-							className="text-center">
-							Company Summery
-						</Typography.Title>
-						<div className="flex justify-center items-center mt-7">
-							<Search
-								className="w-56 text-center "
-								placeholder="input search text"
-								onSearch={onSearch}
-							/>
-						</div>
-
-						<div className="table mx-auto mt-7">
-							<Table
-								columns={columns}
-								dataSource={data}
-								onChange={onChange}
-								style={{ width: 800 }}
-								pagination={{
-									pageSize: 2,
-								}}
-							/>
-						</div>
-					</div>
-				</Space>
+			<div className="table mx-auto mt-7">
+				<Table
+					columns={columns}
+					dataSource={data}
+					onChange={onChange}
+					style={{ width: 800 }}
+					pagination={{
+						pageSize: 2,
+					}}
+				/>
 			</div>
-		</>
+			<div className="table mx-auto mt-7 bg-">
+				<Typography.Title
+					level={4}
+					type="success"
+					keyboard
+					className="text-center">
+					Department Permission
+				</Typography.Title>
+				<Form>
+					<Form.Item>
+						<Space>
+							<Checkbox />
+							<table className="table-auto border-2 border-black">
+								<th className="px-40 bg-green-100 py-2">Department Name</th>
+							</table>
+						</Space>
+					</Form.Item>
+					<div className="flex justify-center items-center">
+						<Button style={{ backgroundColor: "#3de058" }} icon={<BiSave />}>
+							Save
+						</Button>
+					</div>
+				</Form>
+			</div>
+		</div>
 	);
 };
 
-export default Company;
+export default DepartmentUnit;
