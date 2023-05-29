@@ -53,6 +53,10 @@ const Sidebar = ({ collapsed }) => {
 										label: "Holiday Religion Wise",
 										key: "/holidayReligionWise",
 									},
+									{
+										label: "Designation Specification",
+										key: "/designationSpecification",
+									},
 								],
 							},
 							{ label: "Attendants", key: "", icon: <AiOutlineSchedule /> },
