@@ -8,6 +8,12 @@ import Department from "../../pages/HrmMenu/Department";
 import Designation from "../../pages/HrmMenu/Designation";
 import Section from "../../pages/HrmMenu/Section";
 import Wing from "../../pages/HrmMenu/Wing";
+import Team from "../../pages/HrmMenu/Team";
+import DesignationGroup from "../../pages/HrmMenu/DesignationGroup";
+import Shift from "../../pages/HrmMenu/Shift";
+import HolidayEntry from "../../pages/HrmMenu/HolidayEntry";
+import HolidayReligionWise from "../../pages/HrmMenu/HolidayReligionWise";
+import DesignationSpecification from "../../pages/HrmMenu/DesignationSpecification";
 
 const Router = () => {
 	return (
@@ -21,6 +27,15 @@ const Router = () => {
 			<Route path="/section" element={<Section />} />
 			<Route path="/designation" element={<Designation />} />
 			<Route path="/wing" element={<Wing />} />
+			<Route path="/team" element={<Team />} />
+			<Route path="/designationGroup" element={<DesignationGroup />} />
+			<Route path="/shift" element={<Shift />} />
+			<Route path="/holidayEntry" element={<HolidayEntry />} />
+			<Route path="/holidayReligionWise" element={<HolidayReligionWise />} />
+			<Route
+				path="/designationSpecification"
+				element={<DesignationSpecification />}
+			/>
 		</Routes>
 	);
 };

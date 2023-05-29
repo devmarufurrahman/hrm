@@ -7,7 +7,7 @@ const Section = () => {
 	return (
 		<>
 			<div style={{ width: 1200 }} className="sectionParent p-10 bg-gray-100 ">
-				<Space direction="vertical">
+				<Space direction="vertical" size={90}>
 					<SectionFrom />
 					<SectionSummary />
 					<UnitDepartmentSummary />
