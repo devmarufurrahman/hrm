@@ -45,6 +45,18 @@ const Sidebar = ({ collapsed }) => {
 									{ label: "Section", key: "/section" },
 									{ label: "Designation", key: "/designation" },
 									{ label: "Wing", key: "/wing" },
+									{ label: "Team", key: "/team" },
+									{ label: "Designation Group", key: "/designationGroup" },
+									{ label: "Shift", key: "/shift" },
+									{ label: "Holiday Entry", key: "/holidayEntry" },
+									{
+										label: "Holiday Religion Wise",
+										key: "/holidayReligionWise",
+									},
+									{
+										label: "Designation Specification",
+										key: "/designationSpecification",
+									},
 								],
 							},
 							{ label: "Attendants", key: "", icon: <AiOutlineSchedule /> },
