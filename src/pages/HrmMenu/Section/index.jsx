@@ -6,7 +6,7 @@ import UnitDepartmentSummary from "./UnitDepartmentSummary";
 const Section = () => {
 	return (
 		<>
-			<div style={{ width: 1200 }} className="sectionParent p-10 bg-gray-100 ">
+			<div className="sectionParent p-10 bg-gray-100 flex justify-center items-center">
 				<Space direction="vertical" size={90}>
 					<SectionFrom />
 					<SectionSummary />

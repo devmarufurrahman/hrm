@@ -13,7 +13,7 @@ function App() {
 	return (
 		<>
 			<Header handleCollapse={handleCollapse} collapsed={collapsed} />
-			<Space align="start">
+			<Space style={{ width: "100%" }} align="start">
 				<Sidebar collapsed={collapsed} />
 				<PageContent />
 			</Space>
